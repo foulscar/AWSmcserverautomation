@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Login Page</title>
+    <style>
+        /* Styles for the page */
+        
+        body {
+            background-color: #FDE4E1; /* pastel pink */
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #FFB6C1; /* pastel pink */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            background-color: #F0FFF0; /* pastel green */
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .centered-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        /* Styles for the new button */
+
+        .centered-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .start-server-button {
+            background-color: #FFC0CB; /* pastel pink */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.932.0.min.js"></script>
+    <script>
+        function startServer() {
+            var accessKey = document.getElementById("accessKey").value;
+            var secretAccessKey = document.getElementById("secretAccessKey").value;
+
+            // Set AWS credentials and region
+            AWS.config.update({
+                accessKeyId: accessKey,
+                secretAccessKey: secretAccessKey,
+                region: 'us-east-1'
+            });
+
+            // Create an instance of the AWS Lambda service
+            var lambda = new AWS.Lambda();
+
+            // Prepare the parameters for the Lambda function
+            var params = {
+                FunctionName: 'mc_start',
+                InvocationType: 'RequestResponse',
+                LogType: 'Tail',
+                Payload: '{}' // If you need to pass any specific data, modify the payload accordingly
+            };
+
+            // Invoke the Lambda function
+            lambda.invoke(params, function(err, data) {
+                if (err) {
+                    alert("Error invoking Lambda function: " + err);
+                } else {
+                    alert("Lambda function invoked successfully");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="centered-form">
+        <input type="text" id="accessKey" placeholder="Access Key" required><br>
+        <input type="password" id="secretAccessKey" placeholder="Secret Access Key" required><br>
+    </div>
+
+    <!-- New button -->
+    <div class="centered-button">
+        <button class="start-server-button" onclick="startServer()">Start Server</button>
+    </div>
+    
+</body>
+</html>
+
