@@ -13,32 +13,59 @@ I could have set this up using ECS and EFS, but for a small server with very lit
 I used Amazon 2023 as the AMI
 
 ![Image Alt Text](images/image2.png)
-
-
-
 ![Image Alt Text](images/image3.png)
-
-
-
-![Image Alt Text](images/image4.png)
-
-
-
-
-![Image Alt Text](images/image5.png)
-
-
-
-
-![Image Alt Text](images/image6.png)
-
-
-
-
-![Image Alt Text](images/image7.png)
-
-
-
-
-![Image Alt Text](images/image8.png)
-
+![Image 4 Alt Text](images/image4.png)
+![Image 5 Alt Text](images/image5.png)
+![Image 6 Alt Text](images/image6.png)
+![Image 7 Alt Text](images/image7.png)
+![Image 8 Alt Text](images/image8.png)
+![Image 9 Alt Text](images/image9.png)
+![Image 10 Alt Text](images/image10.png)
+![Image 11 Alt Text](images/image11.png)
+![Image 12 Alt Text](images/image12.png)
+![Image 13 Alt Text](images/image13.png)
+![Image 14 Alt Text](images/image14.png)
+![Image 15 Alt Text](images/image15.png)
+![Image 16 Alt Text](images/image16.png)
+![Image 17 Alt Text](images/image17.png)
+![Image 18 Alt Text](images/image18.png)
+![Image 19 Alt Text](images/image19.png)
+![Image 20 Alt Text](images/image20.png)
+![Image 21 Alt Text](images/image21.png)
+![Image 22 Alt Text](images/image22.png)
+![Image 23 Alt Text](images/image23.png)
+![Image 24 Alt Text](images/image24.png)
+![Image 25 Alt Text](images/image25.png)
+![Image 26 Alt Text](images/image26.png)
+![Image 27 Alt Text](images/image27.png)
+![Image 28 Alt Text](images/image28.png)
+![Image 29 Alt Text](images/image29.png)
+![Image 30 Alt Text](images/image30.png)
+![Image 31 Alt Text](images/image31.png)
+![Image 32 Alt Text](images/image32.png)
+![Image 33 Alt Text](images/image33.png)
+![Image 34 Alt Text](images/image34.png)
+![Image 35 Alt Text](images/image35.png)
+![Image 36 Alt Text](images/image36.png)
+![Image 37 Alt Text](images/image37.png)
+![Image 38 Alt Text](images/image38.png)
+![Image 39 Alt Text](images/image39.png)
+![Image 40 Alt Text](images/image40.png)
+![Image 41 Alt Text](images/image41.png)
+![Image 42 Alt Text](images/image42.png)
+![Image 43 Alt Text](images/image43.png)
+![Image 44 Alt Text](images/image44.png)
+![Image 45 Alt Text](images/image45.png)
+![Image 46 Alt Text](images/image46.png)
+![Image 47 Alt Text](images/image47.png)
+![Image 48 Alt Text](images/image48.png)
+![Image 49 Alt Text](images/image49.png)
+![Image 50 Alt Text](images/image50.png)
+![Image 51 Alt Text](images/image51.png)
+![Image 52 Alt Text](images/image52.png)
+![Image 53 Alt Text](images/image53.png)
+![Image 54 Alt Text](images/image54.png)
+![Image 55 Alt Text](images/image55.png)
+![Image 56 Alt Text](images/image56.png)
+![Image 57 Alt Text](images/image57.png)
+![Image 58 Alt Text](images/image58.png)
