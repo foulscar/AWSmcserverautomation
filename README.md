@@ -459,8 +459,11 @@ The Distribution Domain Name will be your website's url
 ![Image 56 Alt Text](images/image56.png)
 
 This website will use your access key for authentication
+
 ALWAYS MAKE SURE THE CONNECTION IS SECURE AND USING HTTPS
+
 You can give it your access key from earlier then click the "Start Server" button
+
 If everything is working, you should get a popup after a few seconds that looks like this:
 
 ![Image 57 Alt Text](images/image57.png)
