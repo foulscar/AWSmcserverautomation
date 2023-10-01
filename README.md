@@ -82,8 +82,39 @@ Once done, go ahead and launch your EC2
 ---
 
 ![Image 8 Alt Text](images/image8.png)
+
+---
+
+### Now SSH into your instance
+
+---
+
 ![Image 9 Alt Text](images/image9.png)
 ![Image 10 Alt Text](images/image10.png)
+
+---
+
+### We now need to install Java on our instance
+
+Go ahead and run these commands:
+
+
+These will import our repo
+'''console
+sudo rpm --import https://yum.corretto.aws/corretto.key 
+'''
+'''
+sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+'''
+
+
+This will install Java 17
+'''
+sudo yum install -y java-16-amazon-corretto-devel
+'''
+
+---
+
 ![Image 11 Alt Text](images/image11.png)
 ![Image 12 Alt Text](images/image12.png)
 ![Image 13 Alt Text](images/image13.png)
