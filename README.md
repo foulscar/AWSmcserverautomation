@@ -101,20 +101,20 @@ Go ahead and run these commands:
 
 These will import our repo
 
-'''console
+```console
 sudo rpm --import https://yum.corretto.aws/corretto.key 
-'''
+```
 
-'''
+```
 sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
-'''
+```
 
 
 This will install Java 17
 
-'''
+```
 sudo yum install -y java-16-amazon-corretto-devel
-'''
+```
 
 ---
 
