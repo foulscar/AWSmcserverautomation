@@ -470,3 +470,5 @@ You can give it your access key from earlier then click the "Start Server" butto
 If everything is working, you should get a popup after a few seconds that looks like this:
 
 ![Image 58 Alt Text](images/image58.png)
+
+# Congrats, your server with remote access is setup, enjoy!
