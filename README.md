@@ -8,30 +8,30 @@ I could have set this up using ECS and EFS, but for a small server with very lit
 - Setup a public VPC & Subnet
 
 ## STEP 1: Create the EC2 & Security Group
-![Image Alt Text](images/image1.png)
-
 ### I used Amazon 2023 as the AMI
 
-
-![Image Alt Text](images/image2.png)
+![Image Alt Text](images/image1.png)
 
 ### I set the type as t2.medium
 t2.medium is NOT under the free tier btw, but I think 4gb of ram is the minimum for a minecraft server personally
 
 
-![Image Alt Text](images/image3.png)
+![Image Alt Text](images/image2.png)
 
 ### Select your VPC, Subnet, and add your SG Rules
 Allow SSH for YOUR IP
 Allow TCP Port 25565 (minecraft port) for anywhere
 
 
-![Image 4 Alt Text](images/image4.png)
+![Image Alt Text](images/image3.png)
 
 ### I gave it 8gb of gp3, which is under the free tier tier, you can go lower or higher
 ### Once done, go ahead and launch your EC2
 
 ## Step 2: Create the Elastic IP and associate it with your EC2 Instance
+
+
+![Image 4 Alt Text](images/image4.png)
 
 ![Image 5 Alt Text](images/image5.png)
 ![Image 6 Alt Text](images/image6.png)
