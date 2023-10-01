@@ -448,15 +448,18 @@ Use the following settings and use you bucket as the origin:
 ![Image 52 Alt Text](images/image52.png)
 
 It can take up to 20 minutes to deploy, give it time
+
 Once deployed, enable static website hosting
 
 ![Image 53 Alt Text](images/image53.png)
 ![Image 54 Alt Text](images/image54.png)
+![Image 55 Alt Text](images/image55.png)
 
 The Distribution Domain Name will be your website's url
 
-![Image 55 Alt Text](images/image55.png)
+
 ![Image 56 Alt Text](images/image56.png)
+![Image 57 Alt Text](images/image57.png)
 
 This website will use your access key for authentication
 
@@ -466,5 +469,4 @@ You can give it your access key from earlier then click the "Start Server" butto
 
 If everything is working, you should get a popup after a few seconds that looks like this:
 
-![Image 57 Alt Text](images/image57.png)
 ![Image 58 Alt Text](images/image58.png)
