@@ -170,6 +170,7 @@ You should now receive an error "Failed to load eula.txt"
 
 ![Image 12 Alt Text](images/image12.png)
 ![Image 13 Alt Text](images/image13.png)
+![Image 14 Alt Text](images/image14.png)
 
 ---
 
@@ -181,19 +182,19 @@ Open the file
 vim eula.txt
 ```
 
+![Image 15 Alt Text](images/image15.png)
+
 
 Press the I key to edit
 
-![Image 14 Alt Text](images/image14.png)
-
 Change "eula=false" to "eula=true"
 
-
+![Image 16 Alt Text](images/image16.png)
 
 ---
 
-![Image 15 Alt Text](images/image15.png)
-![Image 16 Alt Text](images/image16.png)
+
+
 ![Image 17 Alt Text](images/image17.png)
 ![Image 18 Alt Text](images/image18.png)
 ![Image 19 Alt Text](images/image19.png)
