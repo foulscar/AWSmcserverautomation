@@ -290,7 +290,7 @@ This will make the server start when the EC2 Instance gets started
 ---
 
 ### We will now upload our zip file
-[mc_start.zip](../mc_start.zip)
+[mc_start.zip](/mc_start.zip)
 
 ![Image 22 Alt Text](images/image22.png)
 ![Image 23 Alt Text](images/image23.png)
