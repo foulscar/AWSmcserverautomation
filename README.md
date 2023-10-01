@@ -14,6 +14,7 @@ I could have set this up using ECS and EFS, but for a small server with very lit
 
 ---
 
+
 ### I set the type as t2.medium
 t2.medium is NOT under the free tier btw, but I think 4gb of ram is the minimum for a minecraft server personally
 
@@ -21,15 +22,17 @@ t2.medium is NOT under the free tier btw, but I think 4gb of ram is the minimum 
 
 ![Image Alt Text](images/image2.png)
 
+
 ---
 
 ### Select your VPC, Subnet, and add your SG Rules
-Allow SSH for YOUR IP
-Allow TCP Port 25565 (minecraft port) for anywhere
+- Allow SSH for YOUR IP
+- Allow TCP Port 25565 (minecraft port) for anywhere
 
 ---
 
 ![Image Alt Text](images/image3.png)
+
 
 ---
 
@@ -40,14 +43,19 @@ Once done, go ahead and launch your EC2
 
 ![Image 4 Alt Text](images/image4.png)
 
+
 ---
 
+
 ## Step 2: Create the Elastic IP and associate it with your EC2 Instance
+
+
 ### Click Allocate Elastic IP address
 
 ---
 
 ![Image 5 Alt Text](images/image6.png)
+
 
 ---
 
@@ -57,6 +65,7 @@ Once done, go ahead and launch your EC2
 
 ![Image 6 Alt Text](images/image5.png)
 
+
 ---
 
 ### Now associate the Elastic IP with your ec2 instance
@@ -64,6 +73,7 @@ Once done, go ahead and launch your EC2
 ---
 
 ![Image 7 Alt Text](images/image7.png)
+
 
 ---
 
