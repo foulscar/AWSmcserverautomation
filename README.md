@@ -10,9 +10,12 @@ I could have set this up using ECS and EFS, but for a small server with very lit
 ## STEP 1: Create the EC2, Security Group, & Elastic IP
 ![Image Alt Text](images/image1.png)
 
-I used Amazon 2023 as the AMI
+### I used Amazon 2023 as the AMI
 
 ![Image Alt Text](images/image2.png)
+
+
+
 ![Image Alt Text](images/image3.png)
 ![Image 4 Alt Text](images/image4.png)
 ![Image 5 Alt Text](images/image5.png)
