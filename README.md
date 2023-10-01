@@ -12,8 +12,11 @@ I could have set this up using ECS and EFS, but for a small server with very lit
 
 ### I used Amazon 2023 as the AMI
 
+
 ![Image Alt Text](images/image2.png)
 
+### I set the type as t2.medium
+t2.medium is NOT under the free tier btw, but I think 4gb of ram is the minimum for a minecraft server personally
 
 
 ![Image Alt Text](images/image3.png)
