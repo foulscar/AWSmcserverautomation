@@ -98,12 +98,12 @@ Once done, go ahead and launch your EC2
 
 ---
 
-### We now need to install Java on our instance
+### We now need to install Java on your instance
 
 Go ahead and run these commands:
 
 
-These will import our repo
+These will import your repo
 
 ```console
 sudo rpm --import https://yum.corretto.aws/corretto.key 
@@ -258,7 +258,7 @@ Now make sure to change the "-Xmx3900M" part to whatever max RAM you want to all
 
 ---
 
-### Now we will make a service from our service file
+### Now we will make a service from your service file
 
 Type the following commands:
 
@@ -280,10 +280,10 @@ This will make the server start when the EC2 Instance gets started
 
 ---
 
-## Step 4: Create our Lambda functions
+## Step 4: Create your Lambda functions
 
 
-### Create our mc_start function
+### Create your mc_start function
 - Name it "mc_start"
 - Use the "Node.js 14.x" runtime
 
@@ -291,7 +291,7 @@ This will make the server start when the EC2 Instance gets started
 
 ---
 
-### We will now upload our zip file for mc_start
+### We will now upload your zip file for mc_start
 [mc_start.zip](/mc_start.zip)
 
 
@@ -300,7 +300,7 @@ This will make the server start when the EC2 Instance gets started
 
 ---
 
-### Add our environment variables for mc_start
+### Add your environment variables for mc_start
 1. Click configuration
 2. Click Environment Variables
 3. Set the Key as "INSTANCE_ID"
@@ -314,7 +314,7 @@ It should look like this:
 
 ---
 
-### We will now give our mc_start function permission to access our EC2
+### We will now give your mc_start function permission to access your EC2
 
 Go to Permissions and click on the role name
 
@@ -335,7 +335,7 @@ We will attach the following policy:
 
 ---
 
-### We will now create our mc_stop function
+### We will now create your mc_stop function
 
 Do the same configuration as before but name it "mc_stop"
 ![Image 31 Alt Text](images/image31.png)
@@ -351,7 +351,7 @@ Now the environment variables:
 
 ![Image 34 Alt Text](images/image34.png)
 
-Now we will add our trigger
+Now we will add your trigger
 1. Click Triggers
 2. Click Add trigger
 
@@ -363,7 +363,7 @@ Set it to the following:
 
 --- 
 
-## Step 5: Make our IAM User
+## Step 5: Make your IAM User
 name it "minecraft"
 
 ![Image 37 Alt Text](images/image37.png)
@@ -389,14 +389,14 @@ Once created go to the user and click "Security Credentials"
 
 ---
 
-## Step 6: Create our Static Website (for remote starting)
+## Step 6: Create your Static Website (for remote starting)
 
 1. Download [index.html](/index.html) and open it in a text editor
 2. Change the region to whichever you are using for your VPC
 
 ![Image 42 Alt Text](images/image42.png)
 
-Now we will create our S3 Bucket
+Now we will create your S3 Bucket
 
 ![Image 43 Alt Text](images/image43.png)
 ![Image 44 Alt Text](images/image44.png)
