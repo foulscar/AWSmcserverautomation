@@ -34,11 +34,7 @@ Allow TCP Port 25565 (minecraft port) for anywhere
 ---
 
 ### I gave it 8gb of gp3, which is under the free tier tier, you can go lower or higher
-### Once done, go ahead and launch your EC2
-
----
-
-## Step 2: Create the Elastic IP and associate it with your EC2 Instance
+Once done, go ahead and launch your EC2
 
 ---
 
@@ -46,9 +42,35 @@ Allow TCP Port 25565 (minecraft port) for anywhere
 
 ---
 
-![Image 5 Alt Text](images/image5.png)
-![Image 6 Alt Text](images/image6.png)
+## Step 2: Create the Elastic IP and associate it with your EC2 Instance
+### Click Allocate Elastic IP address
+
+---
+
+![Image 5 Alt Text](images/image6.png)
+
+---
+
+### Click Allocate
+
+---
+
+![Image 6 Alt Text](images/image5.png)
+
+---
+
+### Now associate the Elastic IP with your ec2 instance
+
+---
+
 ![Image 7 Alt Text](images/image7.png)
+
+---
+
+### Once done copy the allocate ipv4 address, you will need this later
+
+---
+
 ![Image 8 Alt Text](images/image8.png)
 ![Image 9 Alt Text](images/image9.png)
 ![Image 10 Alt Text](images/image10.png)
