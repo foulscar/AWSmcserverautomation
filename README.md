@@ -113,15 +113,85 @@ sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto
 This will install Java 17
 
 ```
-sudo yum install -y java-16-amazon-corretto-devel
+sudo yum install -y java-17-amazon-corretto-devel
+```
+
+This will test what Java version you have; Verify with the screenshot below
+
+```console
+java --version
+```
+
+---
+
+### We now need to add a user and give it a directory
+
+Run these commands
+
+```console
+sudo adduser minecraft
+```
+
+```console
+sudo su
+```
+
+```console
+mkdir /opt/minecraft/
+```
+
+```console
+mkdir /opt/minecraft/server/
+```
+
+```console
+cd /opt/minecraft/server/
 ```
 
 ---
 
 ![Image 11 Alt Text](images/image11.png)
+
+---
+
+### We now need to download the Server JAR and initialize the files
+
+```console
+wget https://piston-data.mojang.com/v1/objects/5b868151bd02b41319f54c8d4061b8cae84e665c/server.jar
+```
+
+```console
+java -Xmx1024m -Xms1024m -jar server.jar nogui
+```
+
+You should now receive an error "Failed to load eula.txt"
+
+---
+
 ![Image 12 Alt Text](images/image12.png)
 ![Image 13 Alt Text](images/image13.png)
+
+---
+
+### We will now edit the "eula.txt" file to agree to the minecraft eula 
+
+Open the file
+
+```console
+vim eula.txt
+```
+
+
+Press the I key to edit
+
 ![Image 14 Alt Text](images/image14.png)
+
+Change "eula=false" to "eula=true"
+
+
+
+---
+
 ![Image 15 Alt Text](images/image15.png)
 ![Image 16 Alt Text](images/image16.png)
 ![Image 17 Alt Text](images/image17.png)
