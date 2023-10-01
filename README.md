@@ -18,7 +18,7 @@ I could have set this up using ECS and EFS, but for a small server with very lit
 ### I set the type as t2.medium
 t2.medium is NOT under the free tier btw, but I think 4gb of ram is the minimum for a minecraft server personally
 
----
+
 
 ![Image Alt Text](images/image2.png)
 
@@ -29,7 +29,7 @@ t2.medium is NOT under the free tier btw, but I think 4gb of ram is the minimum 
 - Allow SSH for YOUR IP
 - Allow TCP Port 25565 (minecraft port) for anywhere
 
----
+
 
 ![Image Alt Text](images/image3.png)
 
@@ -39,7 +39,7 @@ t2.medium is NOT under the free tier btw, but I think 4gb of ram is the minimum 
 ### I gave it 8gb of gp3, which is under the free tier tier, you can go lower or higher
 Once done, go ahead and launch your EC2
 
----
+
 
 ![Image 4 Alt Text](images/image4.png)
 
@@ -52,7 +52,7 @@ Once done, go ahead and launch your EC2
 
 ### Click Allocate Elastic IP address
 
----
+
 
 ![Image 5 Alt Text](images/image6.png)
 
@@ -61,7 +61,7 @@ Once done, go ahead and launch your EC2
 
 ### Click Allocate
 
----
+
 
 ![Image 6 Alt Text](images/image5.png)
 
@@ -70,7 +70,7 @@ Once done, go ahead and launch your EC2
 
 ### Now associate the Elastic IP with your ec2 instance
 
----
+
 
 ![Image 7 Alt Text](images/image7.png)
 
@@ -79,15 +79,19 @@ Once done, go ahead and launch your EC2
 
 ### Once done copy the allocate ipv4 address, you will need this later
 
----
+
 
 ![Image 8 Alt Text](images/image8.png)
 
 ---
 
-### Now SSH into your instance
 
----
+## Step 3: Setup Minecraft
+
+
+### SSH into your instance
+
+
 
 ![Image 9 Alt Text](images/image9.png)
 ![Image 10 Alt Text](images/image10.png)
@@ -191,14 +195,96 @@ Change "eula=false" to "eula=true"
 
 ![Image 16 Alt Text](images/image16.png)
 
----
 
-
+Type 
+```
+:wq
+```
+ to save and quit
 
 ![Image 17 Alt Text](images/image17.png)
+
+---
+
+### Now we will give the user permissions
+
+```console
+sudo chown -R minecraft:minecraft /opt/minecraft/
+```
+
+---
+
 ![Image 18 Alt Text](images/image18.png)
+
+---
+
+## Now we will make a service file
+
+```console
+sudo vim /etc/systemd/system/minecraft.service
+```
+
 ![Image 19 Alt Text](images/image19.png)
+
+
+Paste the following config
+
+```console
+[Unit]
+Description=Mineraft Server
+After=network.target
+
+[Service]
+User=minecraft
+Nice=5
+KillMode=none
+SuccessExitStatus=0 1
+NoNewPrivileges=true
+WorkingDirectory=/opt/minecraft/server
+ReadWriteDirectories=/opt/minecraft/server
+ExecStart=/usr/bin/java -Xmx3900M -Xms1024M -jar server.jar nogui
+ExecStop=/opt/minecraft/tools/mcrcon/mcrcon -H 127.0.0.1 -P 25575 -p strong-password stop
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Now make sure to change the 
+```console
+-Xmx3900M
+```
+ part to whatever max RAM you want to allocate
+
+ Once done type 
+ ```console
+:wq
+```
+ to save and quit
+
+---
+
 ![Image 20 Alt Text](images/image20.png)
+
+---
+
+### Now we will make a service from our service file
+
+Type the following commands:
+
+```console
+chmod 664 /etc/systemd/system/minecraft.service
+```
+
+```console
+systemctl daemon-reload
+```
+
+```console
+systemctl enable minecraft.service
+```
+
+This will make the server start when the EC2 Instance gets started
+
 ![Image 21 Alt Text](images/image21.png)
 ![Image 22 Alt Text](images/image22.png)
 ![Image 23 Alt Text](images/image23.png)
