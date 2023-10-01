@@ -405,18 +405,50 @@ Now we will create our S3 Bucket
 Upload the index.html file you saved
 
 ![Image 46 Alt Text](images/image46.png)
-![Image 47 Alt Text](images/image47.png)
 
 In you Properties Tab, you want to copy the ARN for the bucket
 
-![Image 48 Alt Text](images/image48.png)
+![Image 47 Alt Text](images/image47.png)
 
 Now click Permissions
 
+![Image 48 Alt Text](images/image48.png)
+
+Now edit the bucket policy
+Use the following JSON and make sure to type in your ARN from earlier:
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "PASTE_ARN_HERE/*"
+        }
+    ]
+}
+```
+
+Once saved, this bucket will now have public read access
+
 ![Image 49 Alt Text](images/image49.png)
+
+---
+
+## Step 7: Create the CloudFront Distribution
+
+Click "Create Distribution"
+
 ![Image 50 Alt Text](images/image50.png)
+
+Use the following settings and use you bucket as the origin:
+
 ![Image 51 Alt Text](images/image51.png)
 ![Image 52 Alt Text](images/image52.png)
+
+Now enable static website hosting
+
 ![Image 53 Alt Text](images/image53.png)
 ![Image 54 Alt Text](images/image54.png)
 ![Image 55 Alt Text](images/image55.png)
