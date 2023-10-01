@@ -276,6 +276,8 @@ systemctl enable minecraft.service
 
 This will make the server start when the EC2 Instance gets started
 
+![Image 21 Alt Text](images/image21.png)
+
 ---
 
 ## Step 4: Create our Lambda functions
@@ -285,26 +287,54 @@ This will make the server start when the EC2 Instance gets started
 - Name it "mc_start"
 - Use the "Node.js 14.x" runtime
 
-![Image 21 Alt Text](images/image21.png)
+![Image 22 Alt Text](images/image22.png)
 
 ---
 
-### We will now upload our zip file
+### We will now upload our zip file for mc_start
 [mc_start.zip](/mc_start.zip)
 
-![Image 22 Alt Text](images/image22.png)
+
 ![Image 23 Alt Text](images/image23.png)
+![Image 24 Alt Text](images/image24.png)
 
 ---
 
-![Image 24 Alt Text](images/image24.png)
-![Image 25 Alt Text](images/image25.png)
-![Image 26 Alt Text](images/image26.png)
+### Add our environment variables for mc_start
+1. Click configuration
+2. Click Environment Variables
+3. Set the Key as "INSTANCE_ID"
+4. Set the Value as your EC2 instance ID
+
+![Image 26 Alt Text](images/image25.png)
+
+It should look like this:
+
+![Image 25 Alt Text](images/image26.png)
+
+---
+
+### We will now give our mc_start function permission to access our EC2
+
+Go to Permissions and click on the role name
+
 ![Image 27 Alt Text](images/image27.png)
+
+It should look like this:
+
 ![Image 28 Alt Text](images/image28.png)
+
+Click "Add permissions" then click "Attach policies"
+
 ![Image 29 Alt Text](images/image29.png)
 ![Image 30 Alt Text](images/image30.png)
+
+We will attach the following policy:
+
 ![Image 31 Alt Text](images/image31.png)
+
+
+
 ![Image 32 Alt Text](images/image32.png)
 ![Image 33 Alt Text](images/image33.png)
 ![Image 34 Alt Text](images/image34.png)
