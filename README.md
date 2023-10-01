@@ -211,8 +211,6 @@ Type
 sudo chown -R minecraft:minecraft /opt/minecraft/
 ```
 
----
-
 ![Image 18 Alt Text](images/image18.png)
 
 ---
@@ -248,19 +246,13 @@ ExecStop=/opt/minecraft/tools/mcrcon/mcrcon -H 127.0.0.1 -P 25575 -p strong-pass
 WantedBy=multi-user.target
 ```
 
-Now make sure to change the 
-```console
--Xmx3900M
-```
- part to whatever max RAM you want to allocate
+Now make sure to change the "-Xmx3900M" part to whatever max RAM you want to allocate
 
  Once done type 
  ```console
 :wq
 ```
  to save and quit
-
----
 
 ![Image 20 Alt Text](images/image20.png)
 
@@ -284,9 +276,27 @@ systemctl enable minecraft.service
 
 This will make the server start when the EC2 Instance gets started
 
+---
+
+## Step 4: Create our Lambda functions
+
+
+### Create our mc_start function
+- Name it "mc_start"
+- Use the "Node.js 14.x" runtime
+
 ![Image 21 Alt Text](images/image21.png)
+
+---
+
+### We will now upload our zip file
+[mc_start.zip](../mc_start.zip)
+
 ![Image 22 Alt Text](images/image22.png)
 ![Image 23 Alt Text](images/image23.png)
+
+---
+
 ![Image 24 Alt Text](images/image24.png)
 ![Image 25 Alt Text](images/image25.png)
 ![Image 26 Alt Text](images/image26.png)
