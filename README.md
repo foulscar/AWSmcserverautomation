@@ -126,6 +126,8 @@ This will test what Java version you have; Verify with the screenshot below
 java --version
 ```
 
+![Image 11 Alt Text](images/image11.png)
+
 ---
 
 ### We now need to add a user and give it a directory
@@ -152,9 +154,7 @@ mkdir /opt/minecraft/server/
 cd /opt/minecraft/server/
 ```
 
----
-
-![Image 11 Alt Text](images/image11.png)
+![Image 12 Alt Text](images/image12.png)
 
 ---
 
@@ -172,7 +172,6 @@ You should now receive an error "Failed to load eula.txt"
 
 ---
 
-![Image 12 Alt Text](images/image12.png)
 ![Image 13 Alt Text](images/image13.png)
 ![Image 14 Alt Text](images/image14.png)
 
