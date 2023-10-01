@@ -306,11 +306,11 @@ This will make the server start when the EC2 Instance gets started
 3. Set the Key as "INSTANCE_ID"
 4. Set the Value as your EC2 instance ID
 
-![Image 26 Alt Text](images/image25.png)
+![Image 25 Alt Text](images/image25.png)
 
 It should look like this:
 
-![Image 25 Alt Text](images/image26.png)
+![Image 26 Alt Text](images/image26.png)
 
 ---
 
@@ -327,31 +327,92 @@ It should look like this:
 Click "Add permissions" then click "Attach policies"
 
 ![Image 29 Alt Text](images/image29.png)
-![Image 30 Alt Text](images/image30.png)
+
 
 We will attach the following policy:
 
+![Image 30 Alt Text](images/image30.png)
+
+---
+
+### We will now create our mc_stop function
+
+Do the same configuration as before but name it "mc_stop"
 ![Image 31 Alt Text](images/image31.png)
 
-
+Upload [mc_stop.zip](/mc_stop.zip)
 
 ![Image 32 Alt Text](images/image32.png)
 ![Image 33 Alt Text](images/image33.png)
+
+Now the environment variables:
+- INSTANCE_ID (KEY: same as before)
+- MAX_HOURS (KEY: however many hours you want it to run for, "3" for 3 hours)
+
 ![Image 34 Alt Text](images/image34.png)
+
+Now we will add our trigger
+1. Click Triggers
+2. Click Add trigger
+
 ![Image 35 Alt Text](images/image35.png)
+
+Set it to the following:
+
 ![Image 36 Alt Text](images/image36.png)
+
+--- 
+
+## Step 5: Make our IAM User
+name it "minecraft"
+
 ![Image 37 Alt Text](images/image37.png)
+
+We will attach the "AWSLambdaRole" Policy
+
 ![Image 38 Alt Text](images/image38.png)
+
+Click Create User
+
 ![Image 39 Alt Text](images/image39.png)
+
+Once created go to the user and click "Security Credentials"
+
 ![Image 40 Alt Text](images/image40.png)
+
+1. Click "Create Access Key"
+2. Click "Application running outside AWS"
+3. READ THE WARNING REGARDING ACCESS KEY STORAGE, (this is important, do not store this in plain text and further on we will make a static website, ALWAYS CHECK FOR HTTPS)
+4. Do not lose this access key
+
 ![Image 41 Alt Text](images/image41.png)
+
+---
+
+## Step 6: Create our Static Website (for remote starting)
+
+1. Download [index.html](/index.html) and open it in a text editor
+2. Change the region to whichever you are using for your VPC
+
 ![Image 42 Alt Text](images/image42.png)
+
+Now we will create our S3 Bucket
+
 ![Image 43 Alt Text](images/image43.png)
 ![Image 44 Alt Text](images/image44.png)
 ![Image 45 Alt Text](images/image45.png)
+
+Upload the index.html file you saved
+
 ![Image 46 Alt Text](images/image46.png)
 ![Image 47 Alt Text](images/image47.png)
+
+In you Properties Tab, you want to copy the ARN for the bucket
+
 ![Image 48 Alt Text](images/image48.png)
+
+Now click Permissions
+
 ![Image 49 Alt Text](images/image49.png)
 ![Image 50 Alt Text](images/image50.png)
 ![Image 51 Alt Text](images/image51.png)
